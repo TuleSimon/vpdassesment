@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "738223265834",
+    "project_id": "assesment-34623",
+    "storage_bucket": "assesment-34623.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738223265834:android:a921abb47b855400744b53",
+        "android_client_info": {
+          "package_name": "com.simon.assesment.simonassesment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCF5qDQAga3Pennygd8Bbz7MwqewDiZrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738223265834:android:7a2f184b8753c28d744b53",
+        "android_client_info": {
+          "package_name": "com.simon.vpdassesment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCF5qDQAga3Pennygd8Bbz7MwqewDiZrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

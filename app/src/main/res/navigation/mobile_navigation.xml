@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.simon.vpdassesment.features.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.simon.vpdassesment.features.login.LoginFragment"
+        android:label="@string/log_in"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/sign_up"
+        android:name="com.simon.vpdassesment.features.signup.CreateAccountFragment"
+        android:label="@string/log_in"
+        tools:layout="@layout/fragment_register_user" />
+
+
+</navigation>
