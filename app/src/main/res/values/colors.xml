@@ -18,4 +18,6 @@
 
     <!--colros for card-->
     <color name="whiteCardColor">#fff</color>
+    <color name="red">#F44336</color>
+    <color name="green">#1EE208</color>
 </resources>

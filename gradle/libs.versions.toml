@@ -8,7 +8,9 @@ junit = "4.13.2"
 loadingButton = "3.0.0"
 loadingview = "1.1"
 napier = "2.7.1"
-
+converter-gson = "2.9.0"
+datastoreCore = "1.1.2"
+powerspinner = "1.2.7"
 room = "2.6.1"
 firebaseKtx = "0.2.1"
 junitVersion = "1.2.1"
@@ -28,6 +30,8 @@ firebaseAuth = "23.2.0"
 credentials = "1.5.0-rc01"
 credentialsPlayServicesAuth = "1.3.0"
 googleid = "1.1.1"
+legacySupportV4 = "1.0.0"
+recyclerview = "1.4.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -53,11 +57,19 @@ androidx-credentials-play-services-auth = { group = "androidx.credentials", name
 androidx-credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credentials" }
 googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
 # Room
+powerspinner = { module = "com.github.skydoves:powerspinner", version.ref = "powerspinner" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 firebase-database-ktx = { module = "com.github.skydoves:firebase-database-ktx", version.ref = "firebaseKtx" }
 napier = { module = "io.github.aakira:napier", version.ref = "napier" }
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+#Datastore
+androidx-datastore-core = { module = "androidx.datastore:datastore", version.ref = "datastoreCore" }
+androidx-datastore-pref-core = { module = "androidx.datastore:datastore-preferences", version.ref = "datastoreCore" }
+#Gson
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converter-gson" }
+androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

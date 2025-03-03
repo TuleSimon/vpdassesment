@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="@color/white"
+    app:contentPaddingTop="18dp"
+    app:contentPaddingBottom="18dp"
+    app:contentPaddingLeft="16dp"
+    app:contentPaddingRight="16dp"
+    android:paddingHorizontal="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            app:cardBackgroundColor="#31BB86FC"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="5dp"
+            app:strokeWidth="0dp"
+            app:strokeColor="@android:color/transparent"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:src="@drawable/icon_transactions"
+            android:layout_height="match_parent"
+            app:tint="@color/purple_200" />
+        </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Sent Money"
+                    android:textSize="16sp"
+                    android:id="@+id/desc"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/krub_semibold"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Debit Alert"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="32,000"
+                android:textSize="20sp"
+                android:id="@+id/amount"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:fontFamily="@font/krub_semibold"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="12th september 2024"
+                android:id="@+id/date"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

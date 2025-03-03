@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/purple_200"
+    app:cardCornerRadius="15dp"
+    android:id="@+id/parent"
+    android:layout_height="200dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingHorizontal="15dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/card_effect"
+            android:scaleType="fitXY"
+            android:layout_height="200dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/krub_semibold"
+            android:text="TULE SIMON JOSEPH"
+            android:id="@+id/user_name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Today, 8th Septem 2025"
+            android:layout_marginTop="5dp"
+            android:id="@+id/date"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/konkhmer_sleokchher"
+            android:text="N30,000"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/account_no_template"
+            android:layout_marginTop="5dp"
+            android:id="@+id/account_number"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

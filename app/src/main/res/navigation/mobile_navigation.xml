@@ -9,19 +9,37 @@
         android:id="@+id/navigation_home"
         android:name="com.simon.vpdassesment.features.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_transfer_fragment"
+            app:destination="@id/transfer_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/login_fragment"
         android:name="com.simon.vpdassesment.features.login.LoginFragment"
         android:label="@string/log_in"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_fragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 
     <fragment
         android:id="@+id/sign_up"
         android:name="com.simon.vpdassesment.features.signup.CreateAccountFragment"
-        android:label="@string/log_in"
-        tools:layout="@layout/fragment_register_user" />
+        android:label="@string/create_your_account"
+        tools:layout="@layout/fragment_register_user" >
+        <action
+            android:id="@+id/action_sign_up_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/transfer_fragment"
+        android:name="com.simon.vpdassesment.features.transfer.TransferFragment"
+        android:label="@string/transfer"
+        tools:layout="@layout/fragment_transfer" />
 
 
 </navigation>

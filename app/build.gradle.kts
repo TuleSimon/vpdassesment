@@ -59,6 +59,8 @@ dependencies {
     implementation(libs.androidx.credentials)
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -73,5 +75,9 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.glide)
     implementation(libs.napier)
+    implementation(libs.androidx.datastore.core)
+    implementation(libs.androidx.datastore.pref.core)
+    implementation(libs.converter.gson)
+    implementation(libs.powerspinner)
 
 }

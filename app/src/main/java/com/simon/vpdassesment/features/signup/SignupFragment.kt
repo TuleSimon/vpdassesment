@@ -134,7 +134,7 @@ class CreateAccountFragment : Fragment() {
             createAccountViewmodel.register(onError = {
                 requireContext().toast(it)
             }) {
-                findNavController().navigate(R.id.navigation_home)
+                findNavController().navigate(R.id.action_sign_up_to_navigation_home)
             }
         }
     }

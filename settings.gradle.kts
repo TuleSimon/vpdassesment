@@ -7,6 +7,7 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
+        maven { setUrl("https://oss.sonatype.org/content/repositories/snapshots/") }
         mavenCentral()
         gradlePluginPortal()
 
@@ -18,6 +19,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven(url="https://jitpack.io")
+        maven { setUrl("https://oss.sonatype.org/content/repositories/snapshots/") }
 
     }
 }

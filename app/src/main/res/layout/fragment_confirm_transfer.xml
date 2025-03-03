@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingTop="@dimen/list_item_spacing_half"
+    android:paddingBottom="@dimen/list_item_spacing_half"
+    app:contentPadding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Transfer"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:fontFamily="@font/krub_bold"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount_template"
+            android:textAlignment="center"
+            android:id="@+id/amount"
+            android:textSize="14sp"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/destination_account"
+            android:id="@+id/destination_account"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/destination_bank"
+            android:id="@+id/destination_bank"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination UserName: Tule Simon Joseph"
+            android:textAlignment="center"
+            android:id="@+id/destination_username"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/source_account"
+            android:id="@+id/source_account"
+            android:textAlignment="center"
+            android:textSize="14sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:id="@+id/cancel"
+            android:backgroundTint="@color/design_default_color_error"
+            android:padding="10dp"
+            android:text="Cancel"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/purple_200"
+            android:padding="10dp"
+            android:id="@+id/trasnfer"
+            android:text="Transfer"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large" />
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -20,6 +20,7 @@ import androidx.navigation.fragment.findNavController
 import com.simon.vpdassesment.R
 import com.simon.vpdassesment.core.LoadingDialogFragment
 import com.simon.vpdassesment.databinding.FragmentLoginBinding
+import com.simon.vpdassesment.features.signup.toast
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -117,7 +118,7 @@ class LoginFragment : Fragment() {
             loginViewModel.login(onError = {
                 requireContext().toast(it)
             }) {
-                findNavController().navigate(R.id.navigation_home)
+                findNavController().navigate(R.id.action_login_fragment_to_navigation_home)
             }
         }
     }
@@ -126,12 +127,4 @@ class LoginFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-}
-
-fun Context.toast(text: Int) {
-    Toast.makeText(this, text, Toast.LENGTH_LONG).show()
-}
-
-fun Context.toast(text: String) {
-    Toast.makeText(this, text, Toast.LENGTH_LONG).show()
 }

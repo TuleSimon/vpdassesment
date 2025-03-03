@@ -17,4 +17,22 @@
     <string name="full_name">Full Name</string>
     <string name="mobile_number">Mobile Number</string>
     <string name="create_your_account">Create Your Account</string>
+    <string name="account_no_template">Account No: %s</string>
+    <string name="recent_transactions">Recent Transactions</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_destination_account">Select Destination Account</string>
+    <string name="account_number">Account Number</string>
+    <string name="amount">Enter Amount</string>
+    <string name="select_bank">Select Bank</string>
+    <string name="select_source_account">Select Source Account</string>
+    <string name="enter_a_description">Enter a description</string>
+    <string name="continuee">Continue</string>
+    <string name="transfer">Transfer</string>
+    <string name="send_money">Send Money</string>
+    <string name="source_account">Source Account : %s</string>
+    <string name="destination_bank">Destination Bank: %s</string>
+    <string name="destination_account">Destination Account: %s</string>
+    <string name="amount_template">Amount: %s</string>
+    <string name="no_recent_transactions">No Recent Transactions</string>
 </resources>
