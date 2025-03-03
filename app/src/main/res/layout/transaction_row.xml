@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     app:cardBackgroundColor="@color/white"
     app:contentPaddingTop="18dp"
     app:contentPaddingBottom="18dp"
@@ -18,9 +18,9 @@
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
-            app:cardBackgroundColor="#31BB86FC"
             app:cardCornerRadius="10dp"
             app:contentPadding="5dp"
+            app:cardElevation="0dp"
             app:strokeWidth="0dp"
             app:strokeColor="@android:color/transparent"
             android:layout_height="match_parent">

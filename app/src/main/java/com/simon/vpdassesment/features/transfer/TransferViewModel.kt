@@ -159,7 +159,6 @@ class TransferViewModel @Inject constructor(
             currentState.sourceAccountNumber.toString().length < 5 -> "Source account number must be at least 5 digits"
             currentState.destinationAccountNumber == null -> null // Consider null as valid for validation
             currentState.destinationAccountNumber.toString().length < 5 -> "Destination account number must be at least 5 digits"
-            currentState.destinationAccountName.isNullOrEmpty() -> "Destination account name cannot be empty"
             currentState.destinationBankId.isNullOrEmpty() -> "Destination bank ID cannot be empty"
             currentState.amount == null -> null // Consider null as valid for validation
             currentState.amount <= 0 -> "Amount must be greater than zero"

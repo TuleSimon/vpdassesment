@@ -20,6 +20,7 @@ import androidx.navigation.fragment.findNavController
 import com.simon.vpdassesment.R
 import com.simon.vpdassesment.core.CurrencyUtils
 import com.simon.vpdassesment.core.LoadingDialogFragment
+import com.simon.vpdassesment.core.addSafeArea
 import com.simon.vpdassesment.databinding.FragmentRegisterUserBinding
 import com.simon.vpdassesment.databinding.FragmentTransferBinding
 import com.simon.vpdassesment.features.signup.CreateAccountViewmodel
@@ -27,9 +28,11 @@ import com.simon.vpdassesment.features.signup.toast
 import com.skydoves.powerspinner.DefaultSpinnerAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import io.github.aakira.napier.Napier
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -75,6 +78,7 @@ class TransferFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.addSafeArea()
         initViews()
         observeTransferState()
         observeUserAccounts()
@@ -85,16 +89,22 @@ class TransferFragment : Fragment() {
     private fun observeTransferState() {
         lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                transferViewModel.transferState.collect { state ->
+                transferViewModel.transferState.collectLatest { state ->
                     Napier.e { "Here state $state" }
-                    updateBanksSpinner(state)
-                    updateDestinationAccountName(state)
-                    updateSubmitButton(state)
-                    handleTransferringState(state)
+                    withContext(Dispatchers.Main) {
+                        updateBanksSpinner(state)
+                        updateSubmitButton(state)
+                        binding.parentAmount.error=state.transferError
+                        binding.parentAmount.isErrorEnabled=state.transferError!=null
+                        handleTransferringState(state)
+                    }
                 }
             }
         }
     }
+
+
+
 
     private fun updateBanksSpinner(state: TransferState) {
         if (state.banks.isNotEmpty() && !set) {
@@ -111,23 +121,14 @@ class TransferFragment : Fragment() {
         }
     }
 
-    private fun updateDestinationAccountName(state: TransferState) {
-        Napier.e { state.destinationAccountName.toString() }
-        if (state.destinationAccountName.isNullOrEmpty()) {
-            binding.userName.visibility =View.GONE
-        } else {
-            binding.userName.text = state.destinationAccountName.orEmpty()
-            binding.userName.visibility =View.VISIBLE
-        }
-        binding.root.invalidate()
-    }
 
-    private fun updateSubmitButton(state: TransferState) {
+    private  fun updateSubmitButton(state: TransferState) {
+
         binding.submit.isEnabled = state.isValid()
         if (state.isValid()) {
             binding.submit.setOnClickListener {
                 val transferDetails = TransferDetails(
-                    amount = CurrencyUtils.longToCurrencyString(state.amount ?: 0L),
+                    amount = CurrencyUtils.longToCurrencyString((state.amount  ?: 0L)),
                     destinationAccount = state.destinationAccountNumber.toString().orEmpty(),
                     destinationBank = state.banks.firstOrNull { it.code == state.destinationBankId }?.name.orEmpty(),
                     destinationUsername = "Tule Simon Joseph",

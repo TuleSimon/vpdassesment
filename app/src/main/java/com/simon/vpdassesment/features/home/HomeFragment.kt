@@ -57,6 +57,7 @@ class HomeFragment : Fragment() {
         binding.sendMoney.setOnClickListener {
             findNavController().navigate(R.id.action_navigation_home_to_transfer_fragment)
         }
+        setUpTransactions()
     }
 
     private fun setUpCardAdapter() {
@@ -65,14 +66,11 @@ class HomeFragment : Fragment() {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
                 homeViewModel.accounts.collect { accounts ->
                     if (accounts.isNotEmpty()) {
-                        if (binding.cardsViewPager.adapter?.itemCount == null &&
-                            (binding.cardsViewPager.adapter?.itemCount ?: 0) < 1
-                        ) {
                             binding.cardsViewPager.config()
                             val adapter = CardPagerAdapter(this@HomeFragment, accounts)
                             binding.cardsViewPager.adapter = adapter
                             binding.cardsViewPager.setPageTransformer(MarginPageTransformer(40));
-                        }
+
                     }
                 }
             }

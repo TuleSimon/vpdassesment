@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.simon.vpdassesment.core.CurrencyUtils
 import com.simon.vpdassesment.core.entity.TransactionEntity
 import com.simon.vpdassesment.databinding.TransactionRowBinding
 import java.text.SimpleDateFormat
@@ -38,10 +39,10 @@ class TransactionAdapter() : RecyclerView.Adapter<TransactionAdapter.Transaction
 
         fun bind(transaction: TransactionEntity) {
             binding.desc.text = transaction.description
-            binding.amount.text = "₦${transaction.amount}"
+            binding.amount.text = CurrencyUtils.longToCurrencyString(transaction.amount)
 
             val date = Date(transaction.timeStampLong)
-            val format = SimpleDateFormat("dd MMMM ентитету", Locale.getDefault())
+            val format = SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
             binding.date.text = format.format(date)
         }
     }

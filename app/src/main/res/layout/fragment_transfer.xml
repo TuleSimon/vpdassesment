@@ -98,17 +98,7 @@
            app:spinner_popup_animation="dropdown"
             app:spinner_popup_elevation="14dp" />
 
-       <TextView
-           android:layout_width="match_parent"
-           android:id="@+id/user_name"
-           android:text="Simon Tule Joseph"
-           android:textSize="16sp"
-           android:layout_marginTop="5dp"
-           android:textStyle="bold"
-           android:drawablePadding="10dp"
-           android:layout_height="wrap_content"
-           app:drawableStartCompat="@drawable/baseline_check_circle_24"
-           app:drawableTint="@color/green" />
+
 
        <com.google.android.material.textfield.TextInputLayout
            android:id="@+id/parent_amount"
@@ -146,6 +136,7 @@
        <com.google.android.material.button.MaterialButton
            android:layout_width="match_parent"
            android:text="@string/continuee"
+           android:enabled="false"
            android:id="@+id/submit"
            android:backgroundTint="@color/purple_200"
            android:layout_marginTop="45dp"

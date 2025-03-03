@@ -49,7 +49,7 @@ public class CurrencyUtils {
     public static String longToCurrencyString(long amount, boolean bCurrencySign) {
         int scale = getFractionDigits();
         int divisor = scale > 0 ? (int) Math.pow(10, scale) : 1;
-        BigDecimal b = new BigDecimal(amount);
+        BigDecimal b = new BigDecimal(amount * 100);
         b = b.divide(new BigDecimal(divisor), scale, RoundingMode.HALF_UP);
         return numberToCurrencyString(b, bCurrencySign);
     }
